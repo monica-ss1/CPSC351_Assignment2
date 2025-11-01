@@ -5,6 +5,8 @@
 - Josh Navarro/joshpatnav@csu.fullerton.edu
 - Spencer Blunt/sblunt3@csu.fullerton.edu
 - Matthew Estrada/mestrada145@csu.fullerton.edu
+- Monica Soliman/msoliman14@csu.fullerton.edu
+
 
 ## The Programming Language:
 
