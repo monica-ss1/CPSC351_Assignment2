@@ -14,13 +14,43 @@
 
 ## How to execute the code:
 
-P1recv:
+### Part 1: Shared Memory 
 
-P1sender:
+recv:
 
-P2recv:
+To compile code:
+> gcc recv.cpp -o recv
+To run code:
+> ./recv
 
-P2sender:
+sender:
+
+To compile code:
+> gcc sender.cpp -o sender
+To run code:
+> ./sender <file name> <receiver pid>
+
+### Part 2: Message Queues
+
+recv:
+
+To compile code:
+> gcc P2recv.cpp -o recv
+To run code:
+> ./recv
+
+sender:
+
+To compile code:
+> gcc P2sender.cpp -o sender
+To run code:
+> ./sender <file name>
+
+### Part 3: Message Pipes
 
 pipefile:
- 
+
+To compile code:
+> gcc pipefile.cpp -o pipefile
+To run code:
+> ./pipefile <file name>
