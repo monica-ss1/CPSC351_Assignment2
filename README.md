@@ -36,6 +36,7 @@ recv:
 
 To compile code:
 > gcc P2recv.cpp -o recv
+
 To run code:
 > ./recv
 
@@ -43,6 +44,7 @@ sender:
 
 To compile code:
 > gcc P2sender.cpp -o sender
+
 To run code:
 > ./sender <file name>
 
@@ -52,5 +54,6 @@ pipefile:
 
 To compile code:
 > gcc pipefile.cpp -o pipefile
+
 To run code:
 > ./pipefile <file name>
