@@ -28,7 +28,7 @@ sender:
 To compile code:
 > gcc sender.cpp -o sender
 To run code:
-> ./sender <file name> <receiver pid>
+> ./sender *file name* *receiver pid*
 
 ### Part 2: Message Queues
 
@@ -46,7 +46,7 @@ To compile code:
 > gcc P2sender.cpp -o sender
 
 To run code:
-> ./sender <file name>
+> ./sender *file name*
 
 ### Part 3: Message Pipes
 
@@ -56,4 +56,4 @@ To compile code:
 > gcc pipefile.cpp -o pipefile
 
 To run code:
-> ./pipefile <file name>
+> ./pipefile *file name*
