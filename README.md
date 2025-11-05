@@ -38,18 +38,18 @@ To run code:
 recv:
 
 To compile code:
-> gcc P2recv.cpp -o recv  
+> g++ -std=c++17 -O2 P2recv.cpp -o recv_mq -lrt 
 
 To run code:
-> ./recv
+> ./recv_mq
 
 sender:
 
 To compile code:
-> gcc P2sender.cpp -o sender  
+> g++ -std=c++17 -O2 P2sender.cpp -o sender_mq -lrt  
 
 To run code:
-> ./sender *file name*
+> ./sender_mq *file name*
 
 ### Part 3: Message Pipes
 
