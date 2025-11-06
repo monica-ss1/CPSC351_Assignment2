@@ -37,18 +37,20 @@ void recvFile(int sigNum) {
 
         // copy data as array into shared memory segment
         //#define buffer 100
-        char shm_buffer[100];
         FILE* file = fopen("file_recv", "w");
-        strncpy((char*)shm_buffer, (char*)ptr, 100);
-
-        // write the read data to a file called file_recv
-        fprintf(file, "received: %s", shm_buffer);
+        if (!file) {
+            perror("failed to open output file");
+            exit(1);
+        }
+        fwrite(ptr, 1, shared_mem_size, file);
         
         // deallocate the shared memory segment
-        unlink("/cpsc351sharedmem");
+        shm_unlink("/cpsc351sharedmem");
         fclose(file);
         //delete shm_buffer;
 
+        // exit the reciever process
+        exit(0);
     } else {
         // shared memory segment does not exist
         perror("Missing shared memory segment!\n");

@@ -7,6 +7,7 @@
 - Matthew Estrada/mestrada145@csu.fullerton.edu
 - Monica Soliman/msoliman14@csu.fullerton.edu
 - Michelle Pineda/pinedama@csu.fullerton.edu
+- Isaac Morrell/isaacmorrell13@csu.fullerton.edu
 
 
 ## The Programming Language:

@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
     int pid = atoi(argv[2]);
 
     // get file name to send
-    char *file = argv[1];
+    char *filename = argv[1];
 
     // size of shared memory segment
     const int shared_mem_size = 4096;
@@ -49,11 +49,18 @@ int main(int argc, char* argv[]) {
         exit(1);
     }
 
+    FILE* file = fopen(filename, "rb");
+    if (!file) {
+        perror("failed to open input file");
+        exit(1);
+    }
+
     // copy data as array into shared memory segment
-    strncpy((char*)shared_mem_ptr, file, 100);
+    fread(shared_mem_ptr, 1, shared_mem_size, file);
+    fclose(file);
 
     // send SIGUSR1 to receiver
-    kill(SIGUSR1, pid);
+    kill(pid, SIGUSR1);
 
     return 1;
 }
