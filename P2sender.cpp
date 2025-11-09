@@ -18,7 +18,7 @@ Run: ./sender_mq <file_name>
 #include <sys/stat.h> // S_IRUSR, S_IWUSR
 #include <unistd.h> //read(), write(), close()
 
-static constexpr const char* QUEUE_NAME = "/cpsc351queue"; // POSIX requires leading '/'
+static constexpr const char* QUEUE_NAME = "/cpsc351messagequeue"; // POSIX requires leading '/'
 static constexpr size_t CHUNK_SIZE = 4096;
 
 static void die_perror(const char* msg) {
@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
     // 1) Open existing message queue (do NOT create; fail if missing)
     mqd_t mqd = mq_open(QUEUE_NAME, O_WRONLY);
     if (mqd == (mqd_t)-1) {
-        die_perror("Failed to open message queue 'cpsc351queue'");
+        die_perror("Failed to open message queue 'cpsc351messagequeue'");
     }
 
 

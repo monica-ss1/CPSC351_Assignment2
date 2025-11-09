@@ -9,7 +9,7 @@
 
 using namespace std;
 
-static constexpr const char* QUEUE_NAME = "/cpsc351queue";
+static constexpr const char* QUEUE_NAME = "/cpsc351messagequeue";
 static constexpr size_t MAX_SIZE   = 4096;
 static constexpr const char* MSG_STOP   = "STOP";
 
